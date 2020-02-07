@@ -1,29 +1,26 @@
 import React from 'react';
+import { Provider } from 'react-redux'
+import store from './Redux/store'
 import './App.css'
+import ToastComponent from './Components/toastComponent'
 
-const Button = (props) => <button onClick={props.onClick}>{props.children}</button>
+
 class App extends React.Component {
+  // eslint-disable-next-line no-useless-constructor
   constructor(props) {
     super(props)
-    this.state = {
-      name: ''
-    }
   }
 
-  handleClick=()=>{
-   this.setState({name: prompt("Please enter your name", "Albert")})
-  }
-
-render(){
-  const {name} = this.state
-  return(
-  <div className='App' >
-      <Button onClick={this.handleClick}>Button</Button>
-     <h1>{name}</h1>
-      </div>
-  )
+  render() {
+    return (
+      <Provider store={store}>
+        <div className='App' >
+          <ToastComponent />
+        </div>
+      </Provider>
+    )
   }
 }
 
-export default App;
+export default App
 

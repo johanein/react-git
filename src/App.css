@@ -1,7 +1,7 @@
 .App {
   padding-top: 20px;
   text-align: center;
-  background-color: #282c34;
+  background-color: #f0efde;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -10,6 +10,27 @@
   font-size: 200;
 }
 
+
+.Toast {
+  padding: 20px;
+  background-color: #85a53a;
+  min-width:10vh;
+  min-height: 10vh;
+  max-width:50vh;
+  max-height: 50vh;
+  display: flex;
+  flex-direction: row;
+  word-wrap: break-word;
+  overflow: scroll;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+#toastButton{
+  min-width:10vh;
+  min-height: 10vh;
+
+}
 
 
 @keyframes App-logo-spin {

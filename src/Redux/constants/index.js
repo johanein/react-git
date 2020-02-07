@@ -1,0 +1,3 @@
+export const OPEN_MODAL = 'OPEN_MODAL'
+export const OPEN_TOAST = 'OPEN_TOAST'
+export const SAVE_JSON_PLACEHOLDER = 'SAVE_JSON_PLACEHOLDER'
