@@ -1,5 +1,5 @@
 .App {
-  padding-top: 20px;
+  /* padding-top: 20px; */
   text-align: center;
   background-color: #f0efde;
   min-height: 100vh;
@@ -8,6 +8,7 @@
   align-items: center;
   justify-content: center;
   font-size: 200;
+  max-height:100vh;
 }
 
 
@@ -17,18 +18,18 @@
   min-width:10vh;
   min-height: 10vh;
   max-width:50vh;
-  max-height: 50vh;
+  max-height: 75vh;
   display: flex;
   flex-direction: row;
   word-wrap: break-word;
-  overflow: scroll;
-  align-items: center;
+  overflow: auto;
+  /* align-items: center; */
   justify-content: flex-start;
 }
 
 #toastButton{
   min-width:10vh;
-  min-height: 10vh;
+  max-height: 10vh;
 
 }
 
