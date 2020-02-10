@@ -1,14 +1,9 @@
 
 import {
-    OPEN_MODAL,
     SAVE_JSON_PLACEHOLDER
 } from '../constants'
 
 import network from './network'
-
-export const modalOpenActionCreator = () => ({
-    type:OPEN_MODAL
-})
 
 export const jsonPlaceholderActionCreator = (payload) => ({
     type:SAVE_JSON_PLACEHOLDER,

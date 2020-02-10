@@ -1,11 +1,11 @@
 import { combineReducers } from 'redux'
 import toastReducer from './toastReducer.js'
-import modalReducer from './modalReducer.js'
+import jsonPlaceHolderReducer from './jsonPlaceHolderReducer'
 
 
 const rootReducer = combineReducers({
     toastReducer,
-    modalReducer
+    jsonPlaceHolderReducer
   })
   
   export default rootReducer

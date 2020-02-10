@@ -1,8 +1,16 @@
 import React from 'react';
 import { Provider } from 'react-redux'
+import {
+  Route,
+  Switch,
+  Link,
+  BrowserRouter as Router
+} from 'react-router-dom'
 import store from './Redux/store'
 import './App.css'
 import ToastComponent from './Components/toastComponent'
+
+const Home = () => <h2>Home</h2>
 
 
 class App extends React.Component {
@@ -15,7 +23,29 @@ class App extends React.Component {
     return (
       <Provider store={store}>
         <div className='App' >
-          <ToastComponent />
+          < Router>
+            <nav>
+              <ul>
+                <li>
+                  <Link to="/">Home</Link>
+                </li>
+                <li>
+                  <Link to="/toast">Toast</Link>
+                </li>
+              </ul>
+            </nav>
+            <Switch>
+              <Route
+                path="/toast"
+                render={(props) => (
+                  <ToastComponent />
+                )}
+              />
+              <Route path="/">
+                <Home />
+              </Route>
+            </Switch>
+          </Router>
         </div>
       </Provider>
     )
