@@ -9,8 +9,9 @@ import {
 import store from './Redux/store'
 import './App.css'
 import ToastComponent from './Components/toastComponent'
+import Home from './Components/home'
 
-const Home = () => <h2>Home</h2>
+
 
 
 class App extends React.Component {
@@ -23,9 +24,9 @@ class App extends React.Component {
     return (
       <Provider store={store}>
         <div className='App' >
-          < Router>
-            <nav>
-              <ul>
+          < Router >
+            <nav >
+              <ul className='Nav'>
                 <li>
                   <Link to="/">Home</Link>
                 </li>
