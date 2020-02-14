@@ -1,6 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useState, useEffect } from 'react';
-import Designer from './src/Designer'
+import Designer from './Designer/Designer'
  
 const Home = () => {
 
