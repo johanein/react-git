@@ -10,7 +10,7 @@ const Button = (props) => <button id='toastButton' type='button' onClick={props.
   {props.children}
 </button>
 
-const toastComponent = (props) => {
+const ToastComponent = (props) => {
 const {jsonPlaceGetAxios, jsonAxiosGetResult} = props
 
   const [toastState, setToastState] = useState({})
@@ -23,16 +23,12 @@ const {jsonPlaceGetAxios, jsonAxiosGetResult} = props
   }
 
   useEffect(() => {
-    notify()
+    toast(toastState.name)
   }, [toastState])
 
   useEffect(() => {
     jsonPlaceGetAxios()
   }, [])
-
-  const notify = () => {
-    return toast(toastState.name)
-  }
 
   return (
     <div className='Toast'>
@@ -63,4 +59,4 @@ function mapDispatchToProps(dispatch) {
 export default React.memo(connect(
   mapStateToProps,
   mapDispatchToProps
-)(toastComponent))
+)(ToastComponent))
