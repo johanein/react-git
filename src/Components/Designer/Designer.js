@@ -378,7 +378,7 @@ class Designer extends Component {
     let canvas = this.getCanvas();
     let {width, height, canvasOffsetX, canvasOffsetY} = canvas;
     let {background, objects, svgStyle, objectTypes} = this.props;
-
+    console.log('his.svgElement',this.svgElement)
     return (
       <SVGRenderer
          background={background}
