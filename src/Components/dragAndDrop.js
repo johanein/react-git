@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from '../drag.module.css'
  import bg from '../bg.jpg'
+ import Emt from '../EMTab_background.jpg'
 const DragAndDrop = () => {
 
 const dragStart = (e) =>{
@@ -36,6 +37,14 @@ e.target.appendChild(img)
             onDrop={drop} 
             onDragOver={dragOver}
             >
+                <img 
+        id={styles.img1}
+        src={Emt}
+        draggable
+        onDragStart={dragStart}
+        alt='imageHere'
+        onDragOver={dragOverImg}
+        />
             </div>
             <div 
             id={styles.box2}
@@ -43,7 +52,7 @@ e.target.appendChild(img)
             onDragOver={dragOver}
             >
         <img 
-        id={styles.img}
+        id={styles.img2}
         src={bg}
         draggable
         onDragStart={dragStart}

@@ -7,15 +7,20 @@
 }
 .dragBox #box1{
     width:140px;
-    height:100px;
+    height:200px;
     background-color: lemonchiffon;
 }
 .dragBox #box2{
     width:140px;
-    height:100px;
+    height:200px;
     background-color: lemonchiffon;
 }
-.dragBox #img {
+.dragBox #img1 {
+    padding:10px;
+    width: 120px;
+    height: 80px;
+}
+.dragBox #img2 {
     padding:10px;
     width: 120px;
     height: 80px;
