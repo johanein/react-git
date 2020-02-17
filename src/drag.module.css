@@ -1,0 +1,22 @@
+.dragBox {
+    height:90vh;
+    width: 90vh;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+}
+.dragBox #box1{
+    width:140px;
+    height:100px;
+    background-color: lemonchiffon;
+}
+.dragBox #box2{
+    width:140px;
+    height:100px;
+    background-color: lemonchiffon;
+}
+.dragBox #img {
+    padding:10px;
+    width: 120px;
+    height: 80px;
+}

@@ -17,7 +17,8 @@ const Home = () => {
         <Designer
         width={1400} height={750}
         objects={objects}
-        onUpdate={handleUpdate}/>
+        onUpdate={handleUpdate}
+        />
         </div>
     );
 }
