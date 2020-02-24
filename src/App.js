@@ -47,13 +47,13 @@ class App extends React.Component {
                 )}
               />
               <Route path="/dnd"
-              render={(props) => (
+                render={(props) => (
                   <DragAndDrop />
                 )}
               />
-              <Route  path="/">
+              <Route exact path="/">
                 <Home />
-              </Route>              
+              </Route>
             </Switch>
           </Router>
         </div>
