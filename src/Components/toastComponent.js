@@ -1,5 +1,5 @@
 import React, { useState, useEffect }  from 'react';
-import { connect } from 'react-redux'
+import { connect, useSelector, useDispatch } from 'react-redux'
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import { toastOpenActionCreator } from '../Redux/actions/toastAction'
@@ -10,8 +10,11 @@ const Button = (props) => <button id='toastButton' type='button' onClick={props.
   {props.children}
 </button>
 
-const ToastComponent = (props) => {
-const {jsonPlaceGetAxios, jsonAxiosGetResult} = props
+const ToastComponent = () => {
+// const {jsonPlaceGetAxios} = props
+
+const jsonAxiosGetResult = useSelector(state => state.jsonPlaceHolderReducer.jsonAxiosGetResult)
+const dispatch = useDispatch()
 
   const [toastState, setToastState] = useState({})
 
@@ -27,7 +30,7 @@ const {jsonPlaceGetAxios, jsonAxiosGetResult} = props
   }, [toastState])
 
   useEffect(() => {
-    jsonPlaceGetAxios()
+    dispatch(jsonPlaceholderGetReq())
   }, [])
 
   return (
@@ -45,14 +48,13 @@ const {jsonPlaceGetAxios, jsonAxiosGetResult} = props
 function mapStateToProps(state) {
   return {
     name: state.toastReducer.name,
-    jsonAxiosGetResult: state.jsonPlaceHolderReducer.jsonAxiosGetResult
   }
 }
 
 function mapDispatchToProps(dispatch) {
   return {
     openToast: () => dispatch(toastOpenActionCreator()),
-    jsonPlaceGetAxios: () => dispatch(jsonPlaceholderGetReq())
+    // jsonPlaceGetAxios: () => dispatch(jsonPlaceholderGetReq())
   }
 }
 
