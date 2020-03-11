@@ -10,6 +10,7 @@ import store from './Redux/store'
 import './App.css'
 import ToastComponent from './Components/toastComponent'
 import Home from './Components/home'
+import AdvancedSearch from './Components/advanceSearch'
 import DragAndDrop from './Components/dragAndDrop'
 
 
@@ -37,6 +38,9 @@ class App extends React.Component {
                 <li>
                   <Link to="/dnd">Drag and Drop</Link>
                 </li>
+                <li>
+                  <Link to="/advSearch">Advance Search</Link>
+                </li>
               </ul>
             </nav>
             <Switch>
@@ -51,6 +55,9 @@ class App extends React.Component {
                   <DragAndDrop />
                 )}
               />
+              <Route exact path="/advSearch">
+                <AdvancedSearch />
+              </Route>
               <Route exact path="/">
                 <Home />
               </Route>

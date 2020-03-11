@@ -25,3 +25,8 @@
     width: 120px;
     height: 80px;
 }
+.dragBox #img3 {
+    padding:10px;
+    width: '100%';
+    height: '100%';
+}
