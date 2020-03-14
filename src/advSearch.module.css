@@ -1,6 +1,34 @@
 
  #img3 {
     padding:10px;
-    width: '100%';
-    height: '100%';
+    width: 100%;
+    height: 100%;
+}
+
+#expansionPanel {
+    background-color: rgba(247, 245, 242, 0.849);
+}
+
+#expansionPanelDetails {
+    padding-left: 5vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start ;
+    flex-direction: column;
+}
+
+#dropDown {
+    width: 35vh;
+    padding:10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start ;
+}
+
+#smallGrid {
+    padding:10px
+}
+
+#bigGrid {
+    padding:10px
 }

@@ -1,6 +1,6 @@
 import React from 'react'
 // import PropTypes from 'prop-types'
-import { Select, MenuItem, OutlinedInput, withStyles } from '@material-ui/core'
+import { Select, MenuItem, withStyles } from '@material-ui/core'
 
 const styles = () => ({
   menuItemFontSize: {
@@ -17,9 +17,7 @@ const EmDropdown = (props) => {
     list,
     label,
     value,
-    heading,
     defaultlabel,
-    placeholdertext,
     outlinedinput,
     selectstyle,
     handleChange,
@@ -32,7 +30,6 @@ const EmDropdown = (props) => {
     hasList &&
     list.map((item, index) => {
       const itemValue = item[value]
-
       return (
         <MenuItem
           id={`${dropDownProps.id || 'emDropdown'}-${index}_menuItem`}
@@ -48,26 +45,14 @@ const EmDropdown = (props) => {
     })
   return (
     <Select
+    labelId="demo-simple-select-label"
+    id="demo-simple-select"
       {...dropDownProps}
       value={selected === undefined || selected === null ? 'null':selected}
       className={selectstyle}
       onChange={(e) => eventhandler(e, field)}
-      input={
-        // outlinedinput ? (
-        <OutlinedInput id="outlined-age-simple" labelWidth={0} />
-        // ) : (
-        //   undefined
-        // )
-      }
     >
-      <MenuItem
-        id={`${dropDownProps.id || 'emDropdown'}_${heading}_menuItem`}
-        disabled
-        value=""
-      >
-        <h6 className={classes.menuItemFontSize}>{heading}</h6>
-      </MenuItem>
-      {placeholdertext ? (
+      {defaultlabel && (
         <MenuItem
           id={`${dropDownProps.id || 'emDropdown'}_${defaultlabel}_menuItem`}
           disabled
@@ -77,19 +62,10 @@ const EmDropdown = (props) => {
         >
           {defaultlabel}
         </MenuItem>
-      ) : (
-        <MenuItem
-          id={`${dropDownProps.id || 'emDropdown'}_None_menuItem`}
-          value={null}
-          selected={selected === undefined || selected === null}
-          className={classes.menuItemFontSize}
-        >
-          None
-        </MenuItem>
-      )}
+      ) }
       {items}
       {noneRequired && (
-        <MenuItem value="none">
+        <MenuItem value={null}>
           <em>None</em>
         </MenuItem>
       )}
