@@ -1,10 +1,18 @@
 import React from 'react'
-// import PropTypes from 'prop-types'
-import { Select, MenuItem, withStyles } from '@material-ui/core'
+import { 
+  Select, 
+  MenuItem, 
+  withStyles,
+  InputLabel,
+  FormControl 
+} from '@material-ui/core'
 
 const styles = () => ({
   menuItemFontSize: {
     fontSize: 12
+  },
+  inputStyle : {
+    marginLeft:0
   }
 })
 
@@ -44,11 +52,16 @@ const EmDropdown = (props) => {
       )
     })
   return (
+    <FormControl >
+    <InputLabel 
+    className={classes.inputStyle}
+    >{defaultlabel}
+    </InputLabel> 
     <Select
     labelId="demo-simple-select-label"
     id="demo-simple-select"
       {...dropDownProps}
-      value={selected === undefined || selected === null ? 'null':selected}
+      value={selected}
       className={selectstyle}
       onChange={(e) => eventhandler(e, field)}
     >
@@ -57,7 +70,6 @@ const EmDropdown = (props) => {
           id={`${dropDownProps.id || 'emDropdown'}_${defaultlabel}_menuItem`}
           disabled
           value={null}
-          selected={selected === undefined || selected === null}
           className={classes.menuItemFontSize}
         >
           {defaultlabel}
@@ -70,6 +82,7 @@ const EmDropdown = (props) => {
         </MenuItem>
       )}
     </Select>
+    </FormControl>
   )
 }
 
