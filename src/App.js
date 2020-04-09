@@ -6,15 +6,14 @@ import {
   Link,
   BrowserRouter as Router
 } from 'react-router-dom'
-import store from './Redux/store'
+import 'tippy.js/dist/tippy.css'; 
+import 'react-toastify/dist/ReactToastify.css'
 import './App.css'
+import store from './Redux/store'
 import ToastComponent from './Components/toastComponent'
 import Home from './Components/home'
 import AdvancedSearch from './Components/advanceSearch'
 import DragAndDrop from './Components/dragAndDrop'
-
-
-
 
 class App extends React.Component {
   // eslint-disable-next-line no-useless-constructor
