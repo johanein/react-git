@@ -3,7 +3,8 @@ import { connect, useSelector, useDispatch } from 'react-redux'
 import { ToastContainer, toast } from 'react-toastify'
 import Tippy from '@tippyjs/react';
 import Posts from './posts'
-import Pagination from './pagination'
+// import Pagination from './pagination'
+import Pagination from './paginationLib'
 import styles from './toast.module.css'
 import { toastOpenActionCreator } from '../../Redux/actions/toastAction'
 import { jsonPlaceholderGetReq } from '../../Redux/actions/jsonPlaceHolderAction'
@@ -45,7 +46,12 @@ const paginate = (number) => {
     <div className={styles.Toast}>
      <Tippy content="Hello"><Button onClick={handleClick}>Button</Button></Tippy>
       <Posts jsonAxiosGetResult={currentPosts}/>
-      <Pagination postsPerPage={postsPerPage} totalPosts={jsonAxiosGetResult.length} paginate={paginate}/>
+      <Pagination 
+    postsPerPage={postsPerPage} 
+    totalPosts={jsonAxiosGetResult.length} 
+    paginate={paginate}
+    currentPage={currentPage}
+    />
       <ToastContainer />
     </div>
   );
