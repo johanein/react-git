@@ -1,0 +1,32 @@
+.Toast {
+    padding: 20px;
+    background-image: url('../../EMTab_background.jpg');
+    min-width:10vh;
+    min-height: 10vh;
+    max-width:50vh;
+    max-height: 75vh;
+    display: flex;
+    flex-direction: column;
+    word-wrap: break-word;
+    overflow: auto;
+    /* align-items: center; */
+    justify-content: flex-start;
+  }
+  
+  #toastButton {
+    min-width:10vh;
+    max-height: 10vh;
+  
+  }
+
+  #paginationstyle {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+  }
+
+  #spanStyle {
+color : blue;
+cursor: pointer;
+margin: 10px;
+  }

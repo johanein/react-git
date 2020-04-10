@@ -3,17 +3,17 @@ import { Provider } from 'react-redux'
 import {
   Route,
   Switch,
-  Link,
   BrowserRouter as Router
 } from 'react-router-dom'
 import 'tippy.js/dist/tippy.css'; 
 import 'react-toastify/dist/ReactToastify.css'
 import './App.css'
 import store from './Redux/store'
-import ToastComponent from './Components/toastComponent'
+import ToastComponent from './Components/Toast/toastComponent'
 import Home from './Components/home'
 import AdvancedSearch from './Components/advanceSearch'
 import DragAndDrop from './Components/dragAndDrop'
+import Nav from './nav'
 
 class App extends React.Component {
   // eslint-disable-next-line no-useless-constructor
@@ -26,22 +26,7 @@ class App extends React.Component {
       <Provider store={store}>
         <div className='App' >
           < Router >
-            <nav >
-              <ul className='Nav'>
-                <li>
-                  <Link to="/">Home</Link>
-                </li>
-                <li>
-                  <Link to="/toast">Toast</Link>
-                </li>
-                <li>
-                  <Link to="/dnd">Drag and Drop</Link>
-                </li>
-                <li>
-                  <Link to="/advSearch">Advance Search</Link>
-                </li>
-              </ul>
-            </nav>
+            <Nav/>
             <Switch>
               <Route
                 path="/toast"
