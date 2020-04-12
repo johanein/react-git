@@ -22,7 +22,7 @@
 .Home{
   min-width: 175vh;
   min-height: 90vh;
-  background-image: url('EMTab_background.jpg');  ;
+  background-image: url('EMTab_background.jpg');
 }
 
 @keyframes App-logo-spin {
