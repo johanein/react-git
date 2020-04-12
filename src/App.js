@@ -12,7 +12,7 @@ import store from './Redux/store'
 import ToastComponent from './Components/Toast/toastComponent'
 import Home from './Components/home'
 import AdvancedSearch from './Components/advanceSearch'
-import DragAndDrop from './Components/dragAndDrop'
+import DragAndDrop from './Components/DragAndDrop/dragAndDrop'
 import Nav from './nav'
 
 class App extends React.Component {

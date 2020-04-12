@@ -1,7 +1,7 @@
 import React from 'react';
-import styles from '../drag.module.css'
- import bg from '../bg.jpg'
- import Emt from '../EMTab_background.jpg'
+import styles from './drag.module.css'
+ import bg from '../../bg.jpg'
+ import Emt from '../../EMTab_background.jpg'
 const DragAndDrop = () => {
 
 const dragStart = (e) =>{
