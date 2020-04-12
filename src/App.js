@@ -11,7 +11,7 @@ import './App.css'
 import store from './Redux/store'
 import ToastComponent from './Components/Toast/toastComponent'
 import Home from './Components/home'
-import AdvancedSearch from './Components/advanceSearch'
+import AdvancedSearch from './Components/AdvanceSearch/advanceSearch'
 import DragAndDrop from './Components/DragAndDrop/dragAndDrop'
 import Nav from './nav'
 

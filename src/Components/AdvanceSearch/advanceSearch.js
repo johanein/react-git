@@ -6,10 +6,10 @@ import {
     ExpansionPanelDetails
 } from '@material-ui/core';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
-import styles from '../advSearch.module.css'
-import Emt from '../EMTab_background.jpg'
-import EmDropdown from './CommonComponents/commoDdropDown'
-import CommonMultiDropdown from './CommonComponents/commonMultiDropdown'
+import styles from './advSearch.module.css'
+import Emt from '../../EMTab_background.jpg'
+import EmDropdown from '../CommonComponents/commoDdropDown'
+import CommonMultiDropdown from '../CommonComponents/commonMultiDropdown'
 
 const AdvancedSearch = () => {
 
