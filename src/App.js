@@ -7,6 +7,7 @@ import {
 } from 'react-router-dom'
 import 'tippy.js/dist/tippy.css'; 
 import 'react-toastify/dist/ReactToastify.css'
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css'
 import store from './Redux/store'
 import ToastComponent from './Components/Toast/toastComponent'
