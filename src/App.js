@@ -11,9 +11,10 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css'
 import store from './Redux/store'
 import ToastComponent from './Components/Toast/toastComponent'
-import Home from './Components/home'
+import Home from './Components/Home/home'
 import AdvancedSearch from './Components/AdvanceSearch/advanceSearch'
 import DragAndDrop from './Components/DragAndDrop/dragAndDrop'
+import CountUp from './Components/CountUp/countUp'
 import Nav from './nav'
 
 class App extends React.Component {
@@ -42,6 +43,9 @@ class App extends React.Component {
               />
               <Route exact path="/advSearch">
                 <AdvancedSearch />
+              </Route>
+              <Route exact path="/countUp">
+                <CountUp />
               </Route>
               <Route exact path="/">
                 <Home />

@@ -1,5 +1,6 @@
 import React, { memo ,useState} from 'react'
 import Modal from 'react-modal';
+import Tippy from '@tippyjs/react';
 import {
     Grid,
 } from '@material-ui/core';
@@ -27,7 +28,7 @@ const styleModal = {
                 xs={9}
             >
                 <h1>Modal</h1>
-<button onClick={buttonClick(true)} > Open model</button>
+<Tippy content='open modal'><button onClick={buttonClick(true)} > Open model</button></Tippy>
                         <Modal
           isOpen={modalIsOpen}
           onRequestClose={buttonClick(false)}
@@ -36,7 +37,7 @@ const styleModal = {
         //   contentLabel={styles.overlayStyle}
         >
             <h1>Modal title</h1>
-            <button onClick={buttonClick(false)} > close model</button>
+            <Tippy content='close modal'><button onClick={buttonClick(false)} > close model</button></Tippy>
             </Modal>
             </Grid>
     )

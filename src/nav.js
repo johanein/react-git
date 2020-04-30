@@ -19,6 +19,9 @@ const Nav = memo( (props)=>{
           <li>
             <Link to="/advSearch">Advance Search</Link>
           </li>
+          <li>
+            <Link to="/countUp"> Count up</Link>
+          </li>
         </ul>
       </nav>
     )
