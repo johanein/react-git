@@ -7,19 +7,11 @@ import {
 import styles from './advSearch.module.css'
 Modal.setAppElement('#root')
 
-const ModalComp = memo((props)=> {
+const ModalComp = memo(()=> {
     const [modalIsOpen,setIsOpen] = useState(false);
     const buttonClick = (params) => ()=>{
         setIsOpen(params)
     }
-const styleModal = {
-    overlay: {
-      backgroundColor: 'grey'
-    },
-    content: {
-      color: 'red'
-    }
-  }
 
     return (
         <Grid
@@ -32,7 +24,6 @@ const styleModal = {
                         <Modal
           isOpen={modalIsOpen}
           onRequestClose={buttonClick(false)}
-          // style={styleModal}
           overlayClassName={styles.overlayStyle}
           contentLabel={styles.modalStyle}
         >
