@@ -2,7 +2,7 @@ import React from 'react';
 import {
     Grid
 } from '@material-ui/core';
-import ModalComp from './modal'
+import MainDisplay from './mainDisplay'
 import ExpansionPanelDropdown from './expansionPanelDropdown'
 import styles from './advSearch.module.css'
 
@@ -14,7 +14,7 @@ const AdvancedSearch = () => {
         id={styles.containerGrid}
         container
         >
-    <ModalComp/>
+    <MainDisplay/>
 <ExpansionPanelDropdown/>
         </Grid>
     );

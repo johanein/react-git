@@ -1,13 +1,12 @@
 import React, { memo ,useState} from 'react'
-import Modal from 'react-modal';
+import Modal from '../Modal/modal'
 import Tippy from '@tippyjs/react';
 import {
     Grid,
 } from '@material-ui/core';
 import styles from './advSearch.module.css'
-Modal.setAppElement('#root')
 
-const ModalComp = memo(()=> {
+const MainDisplay = memo(()=> {
     const [modalIsOpen,setIsOpen] = useState(false);
     const buttonClick = (params) => ()=>{
         setIsOpen(params)
@@ -24,8 +23,6 @@ const ModalComp = memo(()=> {
                         <Modal
           isOpen={modalIsOpen}
           onRequestClose={buttonClick(false)}
-          overlayClassName={styles.overlayStyle}
-          contentLabel={styles.modalStyle}
         >
             <h1>Modal title</h1>
             <Tippy content='close modal'><button onClick={buttonClick(false)} > close model</button></Tippy>
@@ -34,4 +31,4 @@ const ModalComp = memo(()=> {
     )
 })
 
-export default ModalComp
+export default MainDisplay
