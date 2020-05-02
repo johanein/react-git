@@ -15,7 +15,8 @@ import Home from './Components/Home/home'
 import AdvancedSearch from './Components/AdvanceSearch/advanceSearch'
 import DragAndDrop from './Components/DragAndDrop/dragAndDrop'
 import CountUp from './Components/CountUp/countUp'
-import Nav from './nav'
+import Logout from './Components/Logout/logout'
+import Nav from './Nav/nav'
 
 class App extends React.Component {
   // eslint-disable-next-line no-useless-constructor
@@ -46,6 +47,9 @@ class App extends React.Component {
               </Route>
               <Route exact path="/countUp">
                 <CountUp />
+              </Route>
+              <Route exact path="/logout">
+                <Logout />
               </Route>
               <Route exact path="/">
                 <Home />
