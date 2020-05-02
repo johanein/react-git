@@ -32,9 +32,9 @@ const styleModal = {
                         <Modal
           isOpen={modalIsOpen}
           onRequestClose={buttonClick(false)}
-          style={styleModal}
-        //   overlayClassName={styles.modalStyle}
-        //   contentLabel={styles.overlayStyle}
+          // style={styleModal}
+          overlayClassName={styles.overlayStyle}
+          contentLabel={styles.modalStyle}
         >
             <h1>Modal title</h1>
             <Tippy content='close modal'><button onClick={buttonClick(false)} > close model</button></Tippy>
