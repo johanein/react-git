@@ -16,6 +16,7 @@ import AdvancedSearch from './Components/AdvanceSearch/advanceSearch'
 import DragAndDrop from './Components/DragAndDrop/dragAndDrop'
 import CountUp from './Components/CountUp/countUp'
 import Logout from './Components/Logout/logout'
+import IdleTimeComp from './Components/IdleTimer/idleTimer'
 import Nav from './Nav/nav'
 
 const App = memo(function App(props) {
@@ -23,6 +24,7 @@ const App = memo(function App(props) {
     <Provider store={store}>
     <div className='App' >
       < Router >
+      <IdleTimeComp/>
         <Nav/>
         <Switch>
           <Route

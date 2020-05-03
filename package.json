@@ -39,6 +39,7 @@
     "react-color": "^2.18.0",
     "react-dom": "^16.6.9",
     "react-hotkeys": "^1.1.4",
+    "react-idle-timer": "^4.2.12",
     "react-js-pagination": "^3.0.3",
     "react-modal": "^3.11.2",
     "react-portal": "^4.2.0",
