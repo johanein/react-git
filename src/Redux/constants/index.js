@@ -1,2 +1,3 @@
 export const OPEN_TOAST = 'OPEN_TOAST'
 export const SAVE_JSON_PLACEHOLDER = 'SAVE_JSON_PLACEHOLDER'
+export const LOGIN_STATE = 'LOGIN_STATE'

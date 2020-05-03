@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react'
 import { Provider } from 'react-redux'
 import {
   Route,
@@ -18,49 +18,43 @@ import CountUp from './Components/CountUp/countUp'
 import Logout from './Components/Logout/logout'
 import Nav from './Nav/nav'
 
-class App extends React.Component {
-  // eslint-disable-next-line no-useless-constructor
-  constructor(props) {
-    super(props)
-  }
+const App = memo(function App(props) {
+  return (
+    <Provider store={store}>
+    <div className='App' >
+      < Router >
+        <Nav/>
+        <Switch>
+          <Route
+            path="/toast"
+            render={(props) => (
+              <ToastComponent />
+            )}
+          />
+          <Route path="/dnd"
+            component = {DragAndDrop}                  
+          />
+          <Route exact path="/advSearch">
+            <AdvancedSearch />
+          </Route>
+          <Route exact path="/countUp">
+            <CountUp />
+          </Route>
+          <Route exact path="/">
+            <Logout />
+          </Route>
+          <Route exact path="/home">
+            <Home />
+          </Route>
+        </Switch>
+      </Router>
+    </div>
+  </Provider>
+  )
+})
 
-  render() {
-    return (
-      <Provider store={store}>
-        <div className='App' >
-          < Router >
-            <Nav/>
-            <Switch>
-              <Route
-                path="/toast"
-                render={(props) => (
-                  <ToastComponent />
-                )}
-              />
-              <Route path="/dnd"
-                render={(props) => (
-                  <DragAndDrop />
-                )}
-              />
-              <Route exact path="/advSearch">
-                <AdvancedSearch />
-              </Route>
-              <Route exact path="/countUp">
-                <CountUp />
-              </Route>
-              <Route exact path="/logout">
-                <Logout />
-              </Route>
-              <Route exact path="/">
-                <Home />
-              </Route>
-            </Switch>
-          </Router>
-        </div>
-      </Provider>
-    )
-  }
+App.propTypes = {
+
 }
 
 export default App
-

@@ -1,6 +1,6 @@
 const navItems = [
     {
-    url: "/",
+    url: "home",
     name:'Home'
 },
     {
@@ -20,7 +20,7 @@ const navItems = [
     name:'Count up'
 },
     {
-    url: "logout",
+    url: "",
     name:'Logout'
 },
 ]

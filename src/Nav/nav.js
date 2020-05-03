@@ -2,9 +2,12 @@ import React, { memo } from 'react'
 import {
     Link
   } from 'react-router-dom'
+import {  useSelector  } from 'react-redux'
   import navItems from './navItems'
 
 const Nav = memo( (props)=>{
+  const loginState = useSelector(state => state.logoutReducer.loginState)
+   if(loginState) 
     return (
         <nav >
         <ul className='Nav'>
@@ -16,6 +19,7 @@ const Nav = memo( (props)=>{
         </ul>
       </nav>
     )
+    else {return null}
 })
 
 
