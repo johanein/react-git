@@ -17,6 +17,7 @@ import DragAndDrop from './Components/DragAndDrop/dragAndDrop'
 import CountUp from './Components/CountUp/countUp'
 import Logout from './Components/Logout/logout'
 import IdleTimeComp from './Components/IdleTimer/idleTimer'
+import CreditCard from './Components/CreditCard'
 import Nav from './Nav/nav'
 
 const App = memo(function App(props) {
@@ -42,11 +43,14 @@ const App = memo(function App(props) {
           <Route exact path="/countUp">
             <CountUp />
           </Route>
-          <Route exact path="/">
-            <Logout />
+          <Route exact path="/creditCard">
+            <CreditCard />
           </Route>
           <Route exact path="/home">
             <Home />
+          </Route>
+          <Route exact path="/">
+            <Logout />
           </Route>
         </Switch>
       </Router>

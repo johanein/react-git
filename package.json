@@ -36,6 +36,7 @@
     "lodash": "^4.17.15",
     "react-bootstrap": "^1.0.1",
     "react-color": "^2.18.1",
+    "react-credit-cards": "^0.8.3",
     "react-hotkeys": "^1.1.4",
     "react-idle-timer": "^4.2.12",
     "react-js-pagination": "^3.0.3",

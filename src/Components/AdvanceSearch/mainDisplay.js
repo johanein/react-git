@@ -36,10 +36,16 @@ const MainDisplay = memo(()=> {
   alignItems="center"
   >
             <h1>Modal title</h1>
+            <Grid   item
+  direction="row"
+  justify="center"
+  alignItems="center"
+  >
             <SketchPicker
         color={color}
         onChangeComplete={handleColorChangeComplete}
       />
+            </Grid>
       <text>{color}</text>
             <Tippy content='close modal'><button onClick={buttonClick(false)} > close model</button></Tippy>
             </Grid>

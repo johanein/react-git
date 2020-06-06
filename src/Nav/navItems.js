@@ -20,6 +20,10 @@ const navItems = [
     name:'Count up'
 },
     {
+    url: "creditCard",
+    name:'Credit Card'
+},
+    {
     url: "",
     name:'Logout'
 },
