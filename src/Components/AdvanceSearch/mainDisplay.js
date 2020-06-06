@@ -1,16 +1,22 @@
 import React, { memo ,useState} from 'react'
-import Modal from '../Modal/modal'
 import Tippy from '@tippyjs/react';
 import {
     Grid,
 } from '@material-ui/core';
+import { SketchPicker } from 'react-color';
+import Modal from '../Modal/modal'
 import styles from './advSearch.module.css'
 
 const MainDisplay = memo(()=> {
     const [modalIsOpen,setIsOpen] = useState(false);
+    const [color,setColor] = useState('#fff');
     const buttonClick = (params) => ()=>{
         setIsOpen(params)
     }
+    const handleColorChangeComplete = (params) => {
+        setColor(params.hex)
+    }
+    
 
     return (
         <Grid
@@ -24,8 +30,19 @@ const MainDisplay = memo(()=> {
           isOpen={modalIsOpen}
           onRequestClose={buttonClick(false)}
         >
+            <Grid   container
+  direction="column"
+  justify="center"
+  alignItems="center"
+  >
             <h1>Modal title</h1>
+            <SketchPicker
+        color={color}
+        onChangeComplete={handleColorChangeComplete}
+      />
+      <text>{color}</text>
             <Tippy content='close modal'><button onClick={buttonClick(false)} > close model</button></Tippy>
+            </Grid>
             </Modal>
             </Grid>
     )
