@@ -10,15 +10,17 @@ import 'react-toastify/dist/ReactToastify.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css'
 import store from './Redux/store'
-import ToastComponent from './Components/Toast/toastComponent'
-import Home from './Components/Home/home'
-import AdvancedSearch from './Components/AdvanceSearch/advanceSearch'
-import DragAndDrop from './Components/DragAndDrop/dragAndDrop'
-import CountUp from './Components/CountUp/countUp'
-import Logout from './Components/Logout/logout'
 import IdleTimeComp from './Components/IdleTimer/idleTimer'
-import CreditCard from './Components/CreditCard'
 import Nav from './Nav/nav'
+import navItems from './Nav/navItems'
+
+const Routes = () => {
+  return navItems.map(({path,component})=>(
+    <Route exact path={`${path}`}>
+    {component}
+  </Route>
+  ))
+}
 
 const App = memo(function App(props) {
   return (
@@ -28,39 +30,11 @@ const App = memo(function App(props) {
       <IdleTimeComp/>
         <Nav/>
         <Switch>
-          <Route
-            path="/toast"
-            render={(props) => (
-              <ToastComponent />
-            )}
-          />
-          <Route path="/dnd"
-            component = {DragAndDrop}                  
-          />
-          <Route exact path="/advSearch">
-            <AdvancedSearch />
-          </Route>
-          <Route exact path="/countUp">
-            <CountUp />
-          </Route>
-          <Route exact path="/creditCard">
-            <CreditCard />
-          </Route>
-          <Route exact path="/home">
-            <Home />
-          </Route>
-          <Route exact path="/">
-            <Logout />
-          </Route>
+<Routes/>
         </Switch>
       </Router>
     </div>
   </Provider>
   )
 })
-
-App.propTypes = {
-
-}
-
 export default App
