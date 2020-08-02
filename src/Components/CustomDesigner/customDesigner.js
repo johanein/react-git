@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import Designer from '../Designer/Designer'
 import objectInit from '../Designer/designerObject'
  
-const Home = () => {
+const CustomDesigner = () => {
 
     const [objects, setobjects] = useState(objectInit)
 
@@ -13,7 +13,7 @@ const Home = () => {
 
     return (
         <>
-        <h2 >Home</h2>
+        <h2 >Designer</h2>
         <Designer
         width={1200} height={750}
         objects={objects}
@@ -23,4 +23,4 @@ const Home = () => {
     );
 }
  
-export default React.memo(Home);
+export default React.memo(CustomDesigner);

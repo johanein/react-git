@@ -42,7 +42,7 @@ const IdleTimeComp = memo((props)=>{
         {loginState?<IdleTimer
         ref={IdleRef}
         onIdle={onIdle}
-        timeout={1000 * 5} />:null}
+        timeout={1000 * 600} />:null}
         <Modal
         isOpen={modalIsOpen}
         onRequestClose={buttonClick(false)}

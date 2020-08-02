@@ -1,6 +1,7 @@
 import React from 'react'
 import ToastComponent from '../Components/Toast/toastComponent'
-import Home from '../Components/Home/home'
+import Designer from '../Components/CustomDesigner/customDesigner'
+import VideoPlayer from '../Components/VideoPlayer/videoPlayer'
 import AdvancedSearch from '../Components/AdvanceSearch/advanceSearch'
 import DragAndDrop from '../Components/DragAndDrop/dragAndDrop'
 import CountUp from '../Components/CountUp/countUp'
@@ -12,9 +13,15 @@ import CreditCard from '../Components/CreditCard'
 const navItems = [
     {
     url: "home",
-    name:'Home',
-    component:<Home />,
+    name:'VideoPlayer',
+    component:<VideoPlayer />,
     path:"/home"
+},
+    {
+    url: "designer",
+    name:'Designer',
+    component:<Designer />,
+    path:"/designer"
 },
     {
     url: "toast",
