@@ -3,11 +3,19 @@ import { connect, useSelector, useDispatch } from 'react-redux'
 import { ToastContainer, toast } from 'react-toastify'
 import Tippy from '@tippyjs/react';
 import Posts from './posts'
+import ClipLoader from "react-spinners/ClipLoader";
+import { css } from "@emotion/core";
 // import Pagination from './pagination'
 import Pagination from './paginationLib'
 import styles from './toast.module.css'
 import { toastOpenActionCreator } from '../../Redux/actions/toastAction'
-import { jsonPlaceholderGetReq } from '../../Redux/actions/jsonPlaceHolderAction'
+import { jsonPlaceholderGetReq, jsonPlaceholderCleanReq } from '../../Redux/actions/jsonPlaceHolderAction'
+
+const override = css`
+  display: block;
+  margin: 0 auto;
+  border-color: red;
+`;
 
 const ToastComponent = () => {
   const dispatch = useDispatch()
@@ -20,6 +28,9 @@ const [postsPerPage] = useState(5)
 
   useEffect(() => {
     dispatch(jsonPlaceholderGetReq())
+    return () => {
+      dispatch(jsonPlaceholderCleanReq())
+    } 
   }, [])
 
   useEffect(() => {
@@ -44,6 +55,12 @@ const paginate = (number) => {
 
   return (
     <div className={styles.Toast}>
+      <ClipLoader
+          css={override}
+          size={150}
+          color={"#123abc"}
+          loading={!currentPosts.length}
+        />
      <Tippy content="Hello"><Button onClick={handleClick}>Button</Button></Tippy>
       <Posts jsonAxiosGetResult={currentPosts}/>
       <Pagination 

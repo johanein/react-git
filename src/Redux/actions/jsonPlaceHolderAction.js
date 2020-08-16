@@ -1,21 +1,37 @@
 
 import {
-    SAVE_JSON_PLACEHOLDER
+    SAVE_JSON_PLACEHOLDER,
+    CLEAR_JSON_PLACEHOLDER
 } from '../constants'
 
 import network from './network'
 
-export const jsonPlaceholderActionCreator = (payload) => ({
+ const jsonPlaceholderActionCreator = (payload) => ({
     type:SAVE_JSON_PLACEHOLDER,
     payload
 })
+ const jsonPlaceholderCleanReq = (payload) => ({
+    type:CLEAR_JSON_PLACEHOLDER,
+    payload
+})
 
+const netWorkFunction = async ({url}) => {
+    const response = await network.get(url)
+return response
+}
 
-export const jsonPlaceholderGetReq = () =>{
-    return (dispatch)=>network
-    .get('https://jsonplaceholder.typicode.com/posts')
-    .then((payload)=>{
-        // console.log('the response :', payload)
+ const jsonPlaceholderGetReq = () =>{
+    return async (dispatch)=>{
+        const payload = await netWorkFunction({url:'https://jsonplaceholder.typicode.com/posts'})
         dispatch(jsonPlaceholderActionCreator(payload.data))
-    })
+    }  
+}
+
+
+
+
+export {
+    jsonPlaceholderGetReq,
+    jsonPlaceholderActionCreator,
+    jsonPlaceholderCleanReq
 }
