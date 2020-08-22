@@ -1,26 +1,26 @@
-import React from 'react'
+import React , {lazy} from 'react'
 import ToastComponent from '../Components/Toast/toastComponent'
-import Designer from '../Components/CustomDesigner/customDesigner'
-import VideoPlayer from '../Components/VideoPlayer/videoPlayer'
 import AdvancedSearch from '../Components/AdvanceSearch/advanceSearch'
 import DragAndDrop from '../Components/DragAndDrop/dragAndDrop'
 import CountUp from '../Components/CountUp/countUp'
 import Logout from '../Components/Logout/logout'
-
 import CreditCard from '../Components/CreditCard'
+import Lazy from '../Components/Lazy/lazy'
 
+const Designer = lazy(()=>import('../Components/CustomDesigner/customDesigner'));
+const VideoPlayer = lazy(()=>import('../Components/VideoPlayer/videoPlayer'));
 
 const navItems = [
     {
     url: "home",
     name:'VideoPlayer',
-    component:<VideoPlayer />,
+    component: <Lazy><VideoPlayer /></Lazy>,        
     path:"/home"
 },
     {
     url: "designer",
     name:'Designer',
-    component:<Designer />,
+    component:<Lazy><Designer /></Lazy>,
     path:"/designer"
 },
     {

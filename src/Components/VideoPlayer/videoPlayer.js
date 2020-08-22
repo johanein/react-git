@@ -15,8 +15,8 @@ const VideoPlayer = memo((props)=>{
         <>
         <ReactPlayer 
         url='https://youtu.be/28ZbeLWmfiQ?list=PLC3y8-rFHvwhAh1ypBvcZLDO6I7QTY5CM' 
-        width = {1280}
-        height = {720}
+        width = {720}
+        height = {480}
         controls 
         // playing
         onReady={callBackFunction('onReady')}

@@ -15,7 +15,7 @@ const CustomDesigner = () => {
         <>
         <h2 >Designer</h2>
         <Designer
-        width={1200} height={750}
+        width={1080} height={520}
         objects={objects}
         onUpdate={handleUpdate}
         />
