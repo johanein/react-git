@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from './drag.module.css'
- import bg from '../../bg.jpg'
- import Emt from '../../EMTab_background.jpg'
+//  import bg from '../../bg.jpg'
+//  import Emt from '../../EMTab_background.jpg'
 const DragAndDrop = () => {
 
 const dragStart = (e) =>{
@@ -39,7 +39,7 @@ e.target.appendChild(img)
             >
                 <img 
         id={styles.img1}
-        src={Emt}
+        src={`${process.env.PUBLIC_URL}/BackgroundImages/EMTab_background.jpg`}
         draggable
         onDragStart={dragStart}
         alt='imageHere'
@@ -53,7 +53,7 @@ e.target.appendChild(img)
             >
         <img 
         id={styles.img2}
-        src={bg}
+        src={`${process.env.PUBLIC_URL}/BackgroundImages/bg.jpg`}
         draggable
         onDragStart={dragStart}
         alt='imageHere'
