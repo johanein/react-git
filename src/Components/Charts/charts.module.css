@@ -1,0 +1,7 @@
+#charts {
+    display: flex;
+    justify-content: center;
+    background-color: floralwhite;
+    width: 720px;
+    height: 480px;
+  }

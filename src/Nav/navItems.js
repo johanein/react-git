@@ -9,6 +9,7 @@ import Lazy from '../Components/Lazy/lazy'
 
 const Designer = lazy(()=>import('../Components/CustomDesigner/customDesigner'));
 const VideoPlayer = lazy(()=>import('../Components/VideoPlayer/videoPlayer'));
+const Charts = lazy(()=>import('../Components/Charts/index'));
 
 const navItems = [
     {
@@ -22,6 +23,12 @@ const navItems = [
     name:'Designer',
     component:<Lazy><Designer /></Lazy>,
     path:"/designer"
+},
+    {
+    url: "charts",
+    name:'Charts',
+    component:<Lazy><Charts /></Lazy>,
+    path:"/charts"
 },
     {
     url: "toast",
