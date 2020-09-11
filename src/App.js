@@ -16,7 +16,7 @@ import navItems from './Nav/navItems'
 
 const Routes = () => {
   return navItems.map(({path,component})=>(
-    <Route exact path={`${path}`}>
+    <Route exact key={path} path={`${path}`}>
     {component}
   </Route>
   ))

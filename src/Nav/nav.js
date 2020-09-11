@@ -12,7 +12,7 @@ const Nav = memo( (props)=>{
         <nav >
         <ul className='Nav'>
           {navItems.map(({url,name})=>(
-            <li>
+            <li key = {url}>
             <Link to={url}>{name}</Link>
           </li>
           ))}
