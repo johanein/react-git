@@ -12,8 +12,6 @@ const LineCharts = memo(({ data, options }) => {
   return <Line data={data} options={options} />;
 },checkProps);
 
-
-
 LineCharts.propTypes = {
   data: (PropTypes.object | PropTypes.func).isRequired,
   options: PropTypes.object,
