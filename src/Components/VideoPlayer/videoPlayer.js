@@ -7,7 +7,6 @@ const VideoPlayer = memo((props)=>{
     const [msg, setMsg] = useState('here it will come')
 
     const callBackFunction = (msg)=>() => {
-        console.log(msg)
         setMsg(msg)
     }
     
