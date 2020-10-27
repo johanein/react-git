@@ -10,6 +10,7 @@ import Lazy from '../Components/Lazy/lazy'
 const Designer = lazy(()=>import('../Components/CustomDesigner/customDesigner'));
 const VideoPlayer = lazy(()=>import('../Components/VideoPlayer/videoPlayer'));
 const Charts = lazy(()=>import('../Components/Charts/index'));
+const Table = lazy(()=>import('../Components/Table'));
 
 const navItems = [
     {
@@ -17,6 +18,12 @@ const navItems = [
     name:'VideoPlayer',
     component: <Lazy><VideoPlayer /></Lazy>,        
     path:"/home"
+},
+    {
+    url: "table",
+    name:'Table',
+    component: <Lazy><Table /></Lazy>,        
+    path:"/table"
 },
     {
     url: "designer",
