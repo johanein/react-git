@@ -20,14 +20,16 @@ const Table = memo((props) => {
     getDataJson({dispatch})
   }, [])
 
-  const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } =
+  const contextValue = useMemo(() => ({ state, dispatch }), [state, dispatch]);
+
+  const { getTableProps, getTableBodyProps, headerGroups, footerGroups,rows, prepareRow } =
     useTable({
       columns,
       data,
     }) || {};
 
   return (
-      <Provider value={{ state, dispatch }}>
+      <Provider value={contextValue}>
         <div>
     <table {...getTableProps()}>
       <thead>
@@ -51,6 +53,15 @@ const Table = memo((props) => {
           );
         })}
       </tbody>
+      <tfoot>
+{footerGroups.map(footerGroup=>(
+  <tr {...footerGroup.getFooterGroupProps()}>
+{footerGroup.headers.map(column=>(
+  <td {...column.getFooterProps()}>{column.render("Footer")}</td>
+))}
+  </tr>
+))}
+      </tfoot>
     </table>
     </div>
     </Provider>
