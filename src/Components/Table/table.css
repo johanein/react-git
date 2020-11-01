@@ -22,6 +22,11 @@ table {
     color: white;
   }
 
+  table th {
+    position: sticky;
+    top: 0;
+  }
+
   div {
       overflow: auto;
   }
