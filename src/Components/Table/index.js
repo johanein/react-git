@@ -1,12 +1,24 @@
-import React, { memo, useMemo } from "react";
+import React, { memo, useMemo, useReducer, useEffect } from "react";
 import { useTable } from "react-table";
-import MOCK_DATA from "./MOCK_DATA.json";
+// import MOCK_DATA from "./MOCK_DATA.json";
+import {getDataJson} from './Action'
+import {
+  initialState,
+  Provider,
+  reducer
+} from './Reducer'
 import COLUMNS from "./columns";
 import './table.css'
 
 const Table = memo((props) => {
-  const data = useMemo(() => MOCK_DATA, []);
+  const [state, dispatch] = useReducer(reducer, initialState);
+  const {dataJson} = state  
+  const data = useMemo(() => dataJson, [dataJson]);
   const columns = useMemo(() => COLUMNS, []);
+
+  useEffect(() => {
+    getDataJson({dispatch})
+  }, [])
 
   const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } =
     useTable({
@@ -15,7 +27,8 @@ const Table = memo((props) => {
     }) || {};
 
   return (
-      <div>
+      <Provider value={{ state, dispatch }}>
+        <div>
     <table {...getTableProps()}>
       <thead>
         {headerGroups.map((headerGroup = {}) => (
@@ -40,6 +53,7 @@ const Table = memo((props) => {
       </tbody>
     </table>
     </div>
+    </Provider>
   );
 });
 
