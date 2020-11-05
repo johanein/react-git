@@ -7,14 +7,15 @@ import {
   Provider,
   reducer
 } from './Reducer'
-import COLUMNS from "./columns";
+// eslint-disable-next-line no-unused-vars
+import {COLUMNS, groupedColumns}  from "./columns";
 import './table.css'
 
 const Table = memo((props) => {
   const [state, dispatch] = useReducer(reducer, initialState);
   const {dataJson} = state  
   const data = useMemo(() => dataJson, [dataJson]);
-  const columns = useMemo(() => COLUMNS, []);
+  const columns = useMemo(() => groupedColumns, []);
 
   useEffect(() => {
     getDataJson({dispatch})
