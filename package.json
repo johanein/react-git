@@ -37,6 +37,7 @@
     "bootstrap": "^3.4.1",
     "chart.js": "^2.9.3",
     "classnames": "^2.2.6",
+    "faker": "^5.1.0",
     "lodash": "^4.17.15",
     "react-bootstrap": "^1.0.1",
     "react-chartjs-2": "^2.10.0",
@@ -55,6 +56,7 @@
     "react-spinners": "^0.9.0",
     "react-table": "^7.6.1",
     "react-toastify": "^5.5.0",
+    "react-virtualized": "^9.22.2",
     "superagent": "^5.2.2",
     "webfontloader": "^1.6.28",
     "yarn": "^1.22.4"

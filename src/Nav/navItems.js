@@ -11,6 +11,7 @@ const Designer = lazy(()=>import('../Components/CustomDesigner/customDesigner'))
 const VideoPlayer = lazy(()=>import('../Components/VideoPlayer/videoPlayer'));
 const Charts = lazy(()=>import('../Components/Charts/index'));
 const Table = lazy(()=>import('../Components/Table'));
+const VirtualizedList = lazy(()=>import('../Components/VirtualizedList'));
 
 const navItems = [
     {
@@ -18,6 +19,12 @@ const navItems = [
     name:'VideoPlayer',
     component: <Lazy><VideoPlayer /></Lazy>,        
     path:"/home"
+},
+    {
+    url: "virualizedList",
+    name:'VirualizedList',
+    component: <Lazy><VirtualizedList /></Lazy>,        
+    path:"/virualizedList"
 },
     {
     url: "table",
