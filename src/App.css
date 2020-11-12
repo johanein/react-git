@@ -13,14 +13,6 @@
   position:absolute;
 }
 
-.Nav{
-  width: 100vh;
-  display: flex;
-  flex-direction: row;
-  justify-content:space-between;
-  list-style: none;
-}
-
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
