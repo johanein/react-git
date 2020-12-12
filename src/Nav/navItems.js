@@ -12,6 +12,8 @@ const VideoPlayer = lazy(()=>import('../Components/VideoPlayer/videoPlayer'));
 const Charts = lazy(()=>import('../Components/Charts/index'));
 const Table = lazy(()=>import('../Components/Table'));
 const VirtualizedList = lazy(()=>import('../Components/VirtualizedList'));
+const Formik = lazy(()=>import('../Components/Formik'));
+const HOC = lazy(()=>import('../Components/HOC'));
 
 const navItems = [
     {
@@ -19,6 +21,18 @@ const navItems = [
     name:'VideoPlayer',
     component: <Lazy><VideoPlayer /></Lazy>,        
     path:"/home"
+},
+    {
+    url: "formik",
+    name:'Formik',
+    component: <Lazy><Formik /></Lazy>,        
+    path:"/formik"
+},
+    {
+    url: "hoc",
+    name:'HOC',
+    component: <Lazy><HOC /></Lazy>,        
+    path:"/hoc"
 },
     {
     url: "virualizedList",

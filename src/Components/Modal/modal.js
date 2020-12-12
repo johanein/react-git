@@ -1,5 +1,6 @@
 import React, { memo } from 'react'
 import Modal from 'react-modal';
+import ReactDom from 'react-dom'
 import styles from './modal.module.css'
 Modal.setAppElement('#root')
 const modal = memo(function modal(props) {
@@ -7,7 +8,7 @@ const modal = memo(function modal(props) {
     onRequestClose,
     overlayClassName,
     contentLabel} = props
-    return (
+    return ReactDom.createPortal(
         <Modal
         isOpen={isOpen}
         onRequestClose={onRequestClose}
@@ -15,7 +16,8 @@ const modal = memo(function modal(props) {
         contentLabel={contentLabel || styles.modalStyle}
       >
           {props.children}
-          </Modal>
+          </Modal>,
+document.getElementById('portal-root')
     )
 })
 
