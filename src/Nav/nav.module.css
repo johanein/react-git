@@ -1,7 +1,16 @@
 .nav{
-    width: 100vh;
+    width: 100vw;
     display: flex;
     flex-direction: row;
     justify-content:space-between;
     list-style: none;
+  }
+
+  .navList {
+    margin: 5px;
+  }
+  
+  .navLink {
+    color: black;
+
   }

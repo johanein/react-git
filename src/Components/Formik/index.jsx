@@ -1,7 +1,10 @@
-import React, { memo } from 'react'
+import React, { memo, useEffect } from 'react'
 import {useFormik} from 'formik'
 
-const index = memo(function index(props) {
+const index = memo( (props)=>{
+    useEffect(() => {
+        throw new Error('formik is errored')
+    }, [])
     const formik = useFormik({
         initialValues:{
             name:'Albert',

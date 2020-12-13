@@ -19,80 +19,80 @@ const navItems = [
     {
     url: "home",
     name:'VideoPlayer',
-    component: <Lazy><VideoPlayer /></Lazy>,        
-    path:"/home"
+    component: <Lazy><VideoPlayer /></Lazy>
+
 },
     {
     url: "formik",
     name:'Formik',
-    component: <Lazy><Formik /></Lazy>,        
-    path:"/formik"
+    component: <Lazy><Formik /></Lazy>
+
 },
     {
     url: "hoc",
     name:'HOC',
-    component: <Lazy><HOC /></Lazy>,        
-    path:"/hoc"
+    component: <Lazy><HOC /></Lazy>
+
 },
     {
     url: "virualizedList",
     name:'VirualizedList',
-    component: <Lazy><VirtualizedList /></Lazy>,        
-    path:"/virualizedList"
+    component: <Lazy><VirtualizedList /></Lazy>  
+
 },
     {
     url: "table",
     name:'Table',
-    component: <Lazy><Table /></Lazy>,        
-    path:"/table"
+    component: <Lazy><Table /></Lazy>
+
 },
     {
     url: "designer",
     name:'Designer',
-    component:<Lazy><Designer /></Lazy>,
-    path:"/designer"
+    component:<Lazy><Designer /></Lazy>
+
 },
     {
     url: "charts",
     name:'Charts',
-    component:<Lazy><Charts /></Lazy>,
-    path:"/charts"
+    component:<Lazy><Charts /></Lazy>
+
 },
     {
     url: "toast",
     name:'Toast',
-    component:<ToastComponent />,
-    path:"/toast"
+    component:<ToastComponent />
+
 },
     {
     url: "dnd",
     name:'Drag and Drop',
-    component:<DragAndDrop />,
-    path:"/dnd"
+    component:<DragAndDrop />
+
 },
     {
     url: "advSearch",
     name:'Advance Search',
-    component:<AdvancedSearch />,
-    path:"/advSearch"
+    component:<AdvancedSearch />
+
 },
     {
     url: "countUp",
     name:'Count up',
-    component:<CountUp />,
-    path:"/countUp"
+    component:<CountUp />
+
 },
     {
     url: "creditCard",
     name:'Credit Card',
-    component:<CreditCard />,
-    path:"/creditCard"
+    component:<CreditCard />
+
 },
     {
     url: "",
     name:'Logout',
-    component:<Logout />,
-    path:"/"
+    component:<Logout />
+
 },
 ]
 

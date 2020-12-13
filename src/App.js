@@ -13,11 +13,14 @@ import store from './Redux/store'
 import IdleTimeComp from './Components/IdleTimer/idleTimer'
 import Nav from './Nav/nav'
 import navItems from './Nav/navItems'
+import ErrorBoundary from './Components/ErrorBoundary'
 
 const Routes = () => {
-  return navItems.map(({path,component})=>(
-    <Route exact key={path} path={`${path}`}>
+  return navItems.map(({url,component})=>(
+    <Route exact key={url} path={`/${url}`}>
+<ErrorBoundary>
     {component}
+</ErrorBoundary>
   </Route>
   ))
 }
