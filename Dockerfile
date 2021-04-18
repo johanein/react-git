@@ -1,15 +1,7 @@
-FROM node:latest
-
-RUN mkdir -p /app/src
-
-WORKDIR /app/src
-
-COPY package.json .
-
-RUN npm install --legacy-peer-deps
-
-COPY . .
-
+FROM node:10
+WORKDIR /app
+COPY package.json /app
+RUN npm install
+COPY . /app
+CMD npm start
 EXPOSE 3000
-
-CMD ["npm", "start"]
