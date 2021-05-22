@@ -1,26 +1,19 @@
-
-import { createContext } from 'react'
-const {Provider} = createContext()
+import { createContext } from "react";
+const myContext = createContext();
+const { Provider } = myContext;
 
 const initialState = {
-    dataJson:[]
-}
+  dataJson: [],
+};
 
-const reducer =  (state, { type, payload }) => {
-    switch (type) {
-
-    case 'SAVE_DATA_JSON':{
-        return { ...state, dataJson: payload}
-}
-    default:
-        return state
+const reducer = (state, { type, payload }) => {
+  switch (type) {
+    case "SAVE_DATA_JSON": {
+      return { ...state, dataJson: payload };
     }
-}
+    default:
+      return state;
+  }
+};
 
-export {
-    initialState,
-    Provider,
-    reducer
-}
-
-
+export { myContext, initialState, Provider, reducer };
