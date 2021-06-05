@@ -1,5 +1,7 @@
+import React from "react";
 import "./styles.css";
 import { useState } from "react";
+
 export default function App() {
   const [string, setString] = useState("");
   const [boolean, setBoolean] = useState(false);
