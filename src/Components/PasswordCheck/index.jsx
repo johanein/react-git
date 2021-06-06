@@ -7,16 +7,18 @@ export default function App() {
   const [boolean, setBoolean] = useState(false);
   const handleClick = () => {
     const firstCondition = string.length > 8;
-    const secondCondition = string.search(/[a-z]/) !== -1;
-    const thirdCondition = string.search(/[A-Z]/) !== -1;
-    const fourthCondition = string.search(/[\W\D]/) !== -1;
-    const fifthCondition = string.search(/[˜`*]/) === -1;
+    const secondCondition = string.match(/[a-z]{2}/);
+    const thirdCondition = string.match(/[A-Z]{2}/);
+    const fourthCondition = string.match(/[!@#$%ˆ&()]{2}/);
+    const fifthCondition = !string.match(/[˜`*]/);
+    const sixthCondition = string.match(/[\d]{2}/);
     const totalTrue =
       firstCondition &&
       secondCondition &&
       thirdCondition &&
       fourthCondition &&
-      fifthCondition;
+      fifthCondition &&
+      sixthCondition;
     if (totalTrue) {
       setBoolean(true);
     } else {
